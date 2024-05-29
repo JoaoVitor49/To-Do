@@ -12,6 +12,12 @@
     <div class="header">
         <h2>Lista de tarefas</h2>
         <input type="text" id="tarefa" placeholder="Informe a tarefa">
+        <select name="opcoes" id="op">
+            <option value="">Defina a prioridade</option>
+            <option value="baixo">Baixo</option>
+            <option value="medio">Médio</option>
+            <option value="alto">Alto</option>
+        </select>
         <span onclick="addElemento()" class="addBtn">Incluir</span>
     </div>
     <ul id="itemLista">

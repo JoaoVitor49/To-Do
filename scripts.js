@@ -33,9 +33,16 @@ function addElemento() {
     let mes = data.getMonth() + 1;
     let ano = data.getFullYear();
     let dataFormatada = `${dia}/${mes}/${ano}`;
-
-    let t = document.createTextNode(`${dataFormatada} - ${inputValue}`);
+    let prioridade = document.getElementById("op").value;
+    
+    if(prioridade == '') {
+        let t = document.createTextNode(`${dataFormatada} - ${inputValue}`);
     li.appendChild(t);
+    }
+    else{
+        let t = document.createTextNode(`Prioridade ${prioridade} - ${dataFormatada} - ${inputValue}`);
+        li.appendChild(t);
+    }
 
     if (inputValue === '') {
         alert("Você precisa descrever a tarefa");
